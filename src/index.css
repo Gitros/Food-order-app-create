@@ -207,6 +207,12 @@ h1 {
   gap: 1rem;
 }
 
+.error {
+  position: relative;
+  left: 50%;
+  color: red;
+}
+
 .button {
   font: inherit;
   cursor: pointer;

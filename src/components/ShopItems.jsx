@@ -1,15 +1,17 @@
-export default function ShopItems() {
+import ShopItem from "./ShopItem";
+
+
+
+export default function ShopItems(data) {
     return (
         <div id="meals">
-            <div className="meal-item">
-                <article>
-                    <img src="" alt="" />
-                    <h3></h3>
-                    <p className="meal-item-price"></p>
-                    <p className="meal-item-description"></p>
-                    <button></button>
-                </article>
-            </div>
+            {data.data.map((item) => (
+                <ShopItem key={item.id} id={item.id}
+                    name={item.name}
+                    price={item.price}
+                    description={item.description}
+                    image={item.image} />
+            ))}
         </div>
     )
 }
